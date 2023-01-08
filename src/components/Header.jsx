@@ -13,8 +13,12 @@ export default function Header() {
           className={`${active ? "translate-x-0" : "translate-x-full"}`}
         />
         <div className="hidden lg:flex items-center gap-4">
-          <Button href="/login">Log In</Button>
-          <Button.Primary href="/signup">Sign Up</Button.Primary>
+          <Button className={"text-md"} href="/login">
+            Log In
+          </Button>
+          <Button.Primary className={"text-md"} href="/signup">
+            Sign Up
+          </Button.Primary>
         </div>
         <div
           className="block lg:hidden"
