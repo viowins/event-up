@@ -1,3 +1,13 @@
-export default function Logo() {
-  return <img src="/Logo.svg" alt="Event Up Logo" draggable="false" />;
+export default function Logo({ linked }) {
+  return (
+    <>
+      {linked ? (
+        <a href="/">
+          <img src="/Logo.svg" />
+        </a>
+      ) : (
+        <img src="/Logo.svg" />
+      )}
+    </>
+  );
 }

@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full text-white bg-neutral-800">
       <div className="container flex items-center justify-between mx-auto h-[80px] lg:h-[94px]">
-        <Logo />
+        <Logo linked />
         <Header.Menu
           className={`${active ? "translate-x-0" : "translate-x-full"}`}
         />
