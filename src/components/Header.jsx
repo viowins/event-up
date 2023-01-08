@@ -1,19 +1,35 @@
+import { useState } from "react";
 import Logo from "./Logo";
 import Button from "./Button";
 
 export default function Header() {
+  const [active, setActive] = useState(false);
+
   return (
     <header className="fixed top-0 w-full text-white bg-neutral-800">
       <div className="container flex items-center justify-between mx-auto h-[80px] lg:h-[94px]">
         <Logo />
-        <Header.Menu />
+        <Header.Menu
+          className={`${active ? "translate-x-0" : "translate-x-full"}`}
+        />
         <div className="hidden lg:flex items-center gap-4">
           <Button href="/login">Log In</Button>
           <Button.Primary href="/signup">Sign Up</Button.Primary>
         </div>
-        <div className="block lg:hidden">
+        <div
+          className="block lg:hidden"
+          onClick={() => setActive((active) => !active)}
+        >
           <Button>
-            <img src="/ui/menu.svg" alt="Menu Outline" draggable="false" />
+            {active ? (
+              <img
+                src="/ui/menuClose.svg"
+                alt="Menu Outline"
+                draggable="false"
+              />
+            ) : (
+              <img src="/ui/menu.svg" alt="Menu Outline" draggable="false" />
+            )}
           </Button>
         </div>
       </div>
@@ -21,7 +37,7 @@ export default function Header() {
   );
 }
 
-Header.Menu = function () {
+Header.Menu = function ({ className }) {
   const menuItems = {
     home: {
       name: "Home",
@@ -44,9 +60,12 @@ Header.Menu = function () {
       path: "/blog",
     },
   };
-
   return (
-    <nav className="hidden lg:flex items-center gap-10 text-white">
+    <nav
+      className={`absolute lg:relative top-[80px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-screen lg:h-auto flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-white bg-neutral-800 lg:bg-transparent translate-x-full transition-all duration-500 ease-in-out ${
+        className && className
+      } lg:!translate-x-0`}
+    >
       {Object.keys(menuItems).map((key, index) => {
         return (
           <a
@@ -58,6 +77,10 @@ Header.Menu = function () {
           </a>
         );
       })}
+      <div className="flex lg:hidden mt-4 items-center gap-4">
+        <Button href="/login">Log In</Button>
+        <Button.Primary href="/signup">Sign Up</Button.Primary>
+      </div>
     </nav>
   );
 };
