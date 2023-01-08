@@ -1,5 +1,3 @@
 export default function Logo() {
-  return (
-    <img src="/Logo.svg" draggable="false" />
-  ) 
+  return <img src="/Logo.svg" alt="Event Up Logo" draggable="false" />;
 }
