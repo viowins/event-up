@@ -16,7 +16,7 @@ export default function Header() {
           <Button className={"text-md"} href="/login">
             Log In
           </Button>
-          <Button.Primary className={"text-md"} href="/signup">
+          <Button.Primary className={"text-md !py-[10px]"} href="/signup">
             Sign Up
           </Button.Primary>
         </div>
@@ -24,6 +24,7 @@ export default function Header() {
           className="block lg:hidden"
           onClick={() => setActive((active) => !active)}
         >
+          {console.log(active)}
           <Button>
             {active ? (
               <img
@@ -66,7 +67,7 @@ Header.Menu = function ({ className }) {
   };
   return (
     <nav
-      className={`absolute lg:relative top-[80px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-screen lg:h-auto flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-white bg-neutral-800 lg:bg-transparent translate-x-full transition-all duration-500 ease-in-out ${
+      className={`absolute lg:relative top-[80px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-screen lg:h-auto flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-white bg-neutral-800 lg:bg-transparent transition-all duration-500 ease-in-out ${
         className && className
       } lg:!translate-x-0`}
     >

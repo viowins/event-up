@@ -11,7 +11,7 @@
 
 @layer components {
   .container {
-    @apply px-4;
+    @apply px-6;
   }
 
   @media (min-width: 768px) {
