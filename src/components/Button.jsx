@@ -16,7 +16,7 @@ export default function Button({ children, href, className }) {
 
 Button.Primary = function ({ children, href, className }) {
   const classes =
-    "flex items-center gap-2 py-4 px-6 rounded-lg bg-primary-800 text-white text-lg";
+    "flex items-center gap-2 py-4 px-6 rounded-lg bg-primary-800 text-white text-lg transition-all duration-200 hover:bg-primary-600";
   className ? (className += ` ${classes}`) : (className = classes);
   return (
     <>

@@ -6,17 +6,22 @@ export default function Header() {
   const [active, setActive] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full text-white bg-neutral-800">
+    <header className="relative top-0 w-full text-white bg-neutral-800">
       <div className="container flex items-center justify-between mx-auto h-[80px] lg:h-[94px]">
         <Logo linked />
         <Header.Menu
           className={`${active ? "translate-x-0" : "translate-x-full"}`}
         />
         <div className="hidden lg:flex items-center gap-4">
-          <Button className={"text-md"} href="/login">
+          <Button
+            className={
+              "text-md rounded-lg transition-all duration-200 hover:bg-white hover:text-neutral-800"
+            }
+            href="/login"
+          >
             Log In
           </Button>
-          <Button.Primary className={"text-md !py-[10px]"} href="/signup">
+          <Button.Primary className={"!text-md !py-[10px]"} href="/signup">
             Sign Up
           </Button.Primary>
         </div>

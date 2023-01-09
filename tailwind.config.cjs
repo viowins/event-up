@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -34,6 +31,7 @@ module.exports = {
       white: "#FFFFFF",
       warning: "#F9DA70",
       success: "#10B26E",
+      gray: "#F8F8F8",
     },
     extend: {
       fontFamily: {
@@ -58,4 +56,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
