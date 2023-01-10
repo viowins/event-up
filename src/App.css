@@ -20,3 +20,13 @@
     }
   }
 }
+
+@layer utilities {
+  .list-tick {
+    @apply !list-none;
+  }
+
+  .list-tick li {
+    @apply flex items-center gap-[14px] before:content-[url("../public/ui/tick-circle.svg")] before:mt-1;
+  }
+}

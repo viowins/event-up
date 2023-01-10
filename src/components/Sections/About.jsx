@@ -10,7 +10,7 @@ export default function About() {
               draggable="false"
             />
           </div>
-          <div className="w-full lg:w-6/12">
+          <div className="w-full lg:w-5/12">
             <div className="max-w-lg">
               <h1 className="text-h5 md:text-h3 font-semibold text-neutral-800 mb-4 md:mb-6">
                 Everyone on their own device.
