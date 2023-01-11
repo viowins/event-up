@@ -56,10 +56,12 @@ export default function AllFeatures() {
             <div className="w-full md:w-6/12">
               <SubTitle>BENEFITS OF YOU</SubTitle>
               <h3 className="text-h5 md:text-h3 text-white font-semibold mb-6">
-                Video calls loved by <br /> extraordinary teams.
+                Fast, reliable and secure <br /> for your conferences
               </h3>
               <p className="text-lg text-neutral-50 mb-10">
-                Making hybrid‑conference inclusive with unique audio technology.
+                By using us, get the benefits that make it easier for you in the{" "}
+                <br />
+                conference for your convenience and the participants
               </p>
               <div className="flex flex-col md:flex-row md:gap-12">
                 <div className="w-full md:w-6/12">
@@ -67,13 +69,6 @@ export default function AllFeatures() {
                     <li>Intergration with google meet</li>
                     <li>Get data event analytics</li>
                     <li>Protect events with a passcode</li>
-                  </ul>
-                </div>
-                <div className="hidden md:block w-full md:w-6/12">
-                  <ul className="list-tick text-white">
-                    <li>Messages with participation</li>
-                    <li>Advanced Q&A settings</li>
-                    <li>Crowdsource questions</li>
                   </ul>
                 </div>
               </div>
