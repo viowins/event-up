@@ -32,6 +32,7 @@ module.exports = {
       warning: "#F9DA70",
       success: "#10B26E",
       gray: "#F8F8F8",
+      orange: "#953314",
     },
     extend: {
       fontFamily: {
