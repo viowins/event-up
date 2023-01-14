@@ -3,7 +3,7 @@ import Button from "../Button";
 export default function SetupConferences() {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className="container mx-auto py-6 md:py-10">
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-y-8 bg-orange rounded-[15px] px-6 md:px-[104px] py-14 md:py-[105px]">
           <div className="w-full md:w-5/12">
             <h3 className="text-h3 text-white font-semibold mb-4">

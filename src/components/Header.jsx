@@ -29,7 +29,6 @@ export default function Header() {
           className="block lg:hidden"
           onClick={() => setActive((active) => !active)}
         >
-          {console.log(active)}
           <Button>
             {active ? (
               <img
@@ -72,7 +71,7 @@ Header.Menu = function ({ className }) {
   };
   return (
     <nav
-      className={`absolute lg:relative top-[80px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-screen lg:h-auto flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-white bg-neutral-800 lg:bg-transparent transition-all duration-500 ease-in-out ${
+      className={`absolute lg:relative top-[80px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-[calc(100vh-80px)] lg:h-auto pt-6 lg:pt-0 flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-white bg-neutral-800 lg:bg-transparent transition-all duration-500 ease-in-out ${
         className && className
       } lg:!translate-x-0`}
     >
@@ -87,7 +86,7 @@ Header.Menu = function ({ className }) {
           </a>
         );
       })}
-      <div className="flex lg:hidden mt-4 items-center gap-4">
+      <div className="absolute bottom-4 flex lg:hidden mt-4 items-center gap-4">
         <Button href="/login">Log In</Button>
         <Button.Primary href="/signup">Sign Up</Button.Primary>
       </div>

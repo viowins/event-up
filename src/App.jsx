@@ -5,6 +5,7 @@ import DisplayRoom from "./components/Sections/DisplayRoom";
 import AllFeatures from "./components/Sections/AllFeatures";
 import GettingMessage from "./components/Sections/GettingMessage";
 import SetupConferences from "./components/Sections/SetupConferences";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <AllFeatures />
       <GettingMessage />
       <SetupConferences />
+      <Footer />
     </>
   );
 }

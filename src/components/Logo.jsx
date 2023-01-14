@@ -11,3 +11,17 @@ export default function Logo({ linked }) {
     </>
   );
 }
+
+Logo.Black = function ({ linked }) {
+  return (
+    <>
+      {linked ? (
+        <a href="/">
+          <img src="/LogoBlack.svg" />
+        </a>
+      ) : (
+        <img src="/LogoBlack.svg" />
+      )}
+    </>
+  );
+};
