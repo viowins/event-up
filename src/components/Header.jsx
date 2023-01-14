@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Button from "./Button";
 
@@ -76,14 +77,19 @@ Header.Menu = function ({ className }) {
       } lg:!translate-x-0`}
     >
       {Object.keys(menuItems).map((key, index) => {
+        console.log(menuItems[key]["path"]);
         return (
-          <a
-            className="relative text-lg font-medium text-neutral-0 transition-all duration-150 hover:text-white before:absolute before:w-full before:h-[1px] before:-bottom-2 before:bg-primary-800 before:scale-x-0 before:origin-center before:transition-all before:duration-150 hover:before:scale-x-100"
-            href={menuItems[key]["path"]}
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "relative text-lg font-medium text-white transition-all duration-150 before:absolute before:w-full before:h-[1px] before:-bottom-2 before:bg-primary-800 before:scale-x-100 before:origin-center before:transition-all before:duration-150"
+                : "relative text-lg font-medium text-neutral-0 transition-all duration-150 hover:text-white before:absolute before:w-full before:h-[1px] before:-bottom-2 before:bg-primary-800 before:scale-x-0 before:origin-center before:transition-all before:duration-150 hover:before:scale-x-100"
+            }
+            to={menuItems[key]["path"]}
             key={index}
           >
             {menuItems[key]["name"]}
-          </a>
+          </NavLink>
         );
       })}
       <div className="absolute bottom-4 flex lg:hidden mt-4 items-center gap-4">

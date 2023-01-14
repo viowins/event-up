@@ -1,15 +1,14 @@
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default memo(function LanguageSwitcher() {
+export default function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
 
   const langDropdown = (e) => {
     setOpen((open) => !open);
   };
-
   useEffect(() => {
     window.onclick = function (e) {
-      console.log("rendered");
       if (!e.target.matches("#LanguageDropdown")) {
         setOpen((open) => false);
       }
@@ -45,16 +44,16 @@ export default memo(function LanguageSwitcher() {
         }`}
       >
         <nav>
-          <a href="#" className="flex items-center">
+          <Link to="#" className="flex items-center">
             <img
               src="/ui/united-states.svg"
               alt="United States"
               draggable="false"
             />
             <span className="text-md text-neutral-500">English (US)</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </div>
   );
-});
+}

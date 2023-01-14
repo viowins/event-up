@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Logo({ linked }) {
   return (
     <>
       {linked ? (
-        <a href="/">
-          <img src="/Logo.svg" />
-        </a>
+        <Link to="/">
+          <img src="/Logo.svg" alt="Event Up Logo" draggable="false" />
+        </Link>
       ) : (
-        <img src="/Logo.svg" />
+        <img src="/Logo.svg" alt="Event Up Logo" draggable="false" />
       )}
     </>
   );
@@ -16,11 +18,11 @@ Logo.Black = function ({ linked }) {
   return (
     <>
       {linked ? (
-        <a href="/">
-          <img src="/LogoBlack.svg" />
-        </a>
+        <Link to="/">
+          <img src="/LogoBlack.svg" alt="Event Up Logo" draggable="false" />
+        </Link>
       ) : (
-        <img src="/LogoBlack.svg" />
+        <img src="/LogoBlack.svg" alt="Event Up Logo" draggable="false" />
       )}
     </>
   );

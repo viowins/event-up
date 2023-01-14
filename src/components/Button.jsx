@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Button({ children, href, className }) {
   const classes = "py-[10px] px-6 text-md";
   className ? (className += ` ${classes}`) : (className = classes);
   return (
     <>
       {href ? (
-        <a className={`${className && className}`} href={href}>
+        <Link className={`${className && className}`} to={href}>
           {children}
-        </a>
+        </Link>
       ) : (
         <button className={`${className && className}`}>{children}</button>
       )}
@@ -21,9 +23,9 @@ Button.Primary = function ({ children, href, className }) {
   return (
     <>
       {href ? (
-        <a className={`${className && className}`} href={href}>
+        <Link className={`${className && className}`} to={href}>
           {children}
-        </a>
+        </Link>
       ) : (
         <button className={`${className && className}`}>{children}</button>
       )}
@@ -38,9 +40,9 @@ Button.OutlineWhite = function ({ children, href, className }) {
   return (
     <>
       {href ? (
-        <a className={`${className && className}`} href={href}>
+        <Link className={`${className && className}`} to={href}>
           {children}
-        </a>
+        </Link>
       ) : (
         <button className={`${className && className}`}>{children}</button>
       )}

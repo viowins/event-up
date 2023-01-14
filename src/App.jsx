@@ -1,23 +1,19 @@
-import Header from "./components/Header";
-import Hero from "./components/Sections/Hero";
-import About from "./components/Sections/About";
-import DisplayRoom from "./components/Sections/DisplayRoom";
-import AllFeatures from "./components/Sections/AllFeatures";
-import GettingMessage from "./components/Sections/GettingMessage";
-import SetupConferences from "./components/Sections/SetupConferences";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Page404 from "./pages/Page404";
+import Layout from "./Layout";
 
 export default function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <About />
-      <DisplayRoom />
-      <AllFeatures />
-      <GettingMessage />
-      <SetupConferences />
-      <Footer />
+      <Routes>
+        <Route path={"/"} element={<Layout />}>
+          <Route index={true} element={<Home />} />
+          <Route path={"about"} element={<About />} />
+        </Route>
+        <Route path={"*"} element={<Page404 />} />
+      </Routes>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import Input from "./UIComponents/Input";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -121,9 +122,9 @@ export default function Footer() {
             <nav className="flex flex-row flex-wrap items-center gap-y-2 gap-x-6">
               {Object.keys(footerBottomNavItems).map((key, index) => {
                 return (
-                  <a href={footerBottomNavItems[key]["path"]} key={index}>
+                  <Link to={footerBottomNavItems[key]["path"]} key={index}>
                     {footerBottomNavItems[key]["name"]}
-                  </a>
+                  </Link>
                 );
               })}
             </nav>
@@ -133,13 +134,13 @@ export default function Footer() {
               <LanguageSwitcher />
             </div>
             <nav className="w-auto shrink-0 flex itesm-center gap-x-4">
-              <a href="#">
+              <a href="#" target="_blank">
                 <img src="/ui/Twitter.svg" alt="Twitter" draggable="false" />
               </a>
-              <a href="#">
+              <a href="#" target="_blank">
                 <img src="/ui/Facebook.svg" alt="Facebook" draggable="false" />
               </a>
-              <a href="#">
+              <a href="#" target="_blank">
                 <img src="/ui/Linkedin.svg" alt="Linkedin" draggable="false" />
               </a>
             </nav>
@@ -158,12 +159,12 @@ Footer.MenuItem = function ({ menuItems, menuTitle }) {
         {Object.keys(menuItems).map((key, index) => {
           return (
             <div key={index}>
-              <a
+              <Link
                 className="text-lg text-neutral-500"
-                href={menuItems[key]["path"]}
+                to={menuItems[key]["path"]}
               >
                 {menuItems[key]["name"]}
-              </a>
+              </Link>
             </div>
           );
         })}
