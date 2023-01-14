@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Button from "./Button";
 
 export default function Header() {
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const body = document.querySelector("#root");
+    active ? (body.style.position = "fixed") : (body.style.position = "unset");
+  }, [active]);
 
   return (
     <header className="relative top-0 w-full text-white bg-neutral-800">

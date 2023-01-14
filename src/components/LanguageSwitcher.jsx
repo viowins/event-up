@@ -39,8 +39,10 @@ export default function LanguageSwitcher() {
         />
       </button>
       <div
-        className={`absolute z-10 bottom-full w-full mb-4 border border-neutral-50 rounded-lg py-3 px-4 bg-white ${
-          open ? "block" : "hidden"
+        className={`absolute z-10 bottom-full w-full mb-4 border border-neutral-50 rounded-lg py-3 px-4 bg-white transition-all duration-300 ${
+          open
+            ? "opacity-100 visible -translate-y-0"
+            : "opacity-0 invisible translate-y-6"
         }`}
       >
         <nav>
