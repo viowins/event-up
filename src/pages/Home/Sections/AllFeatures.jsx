@@ -1,4 +1,4 @@
-import SubTitle from "../UIComponents/SubTitle";
+import SubTitle from "../../../components/UIComponents/SubTitle";
 
 export default function AllFeatures() {
   return (
