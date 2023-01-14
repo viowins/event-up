@@ -18,6 +18,7 @@ export default function Hero() {
         </div>
       </div>
       <img
+        loading="lazy"
         src="/AboutImage.png"
         alt="Experience you can trust"
         draggable="false"
