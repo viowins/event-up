@@ -77,7 +77,6 @@ Header.Menu = function ({ className }) {
       } lg:!translate-x-0`}
     >
       {Object.keys(menuItems).map((key, index) => {
-        console.log(menuItems[key]["path"]);
         return (
           <NavLink
             className={({ isActive }) =>
